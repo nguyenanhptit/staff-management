@@ -80,6 +80,7 @@
                             <span th:text="${staffs.number + 1}"></span>/<span th:text="${staffs.totalPages}"></span>
                             <a th:href="@{'/staffs'(page=${staffs.number + 1})}" th:if="${staffs.hasNext()}">Next</a>
                         </div>
+
                     </div>
                     <!-- /.box-body -->
                 </div>

@@ -2,6 +2,8 @@ package com.codegym.controller;
 
 import com.codegym.model.Group;
 import com.codegym.model.Staff;
+import com.codegym.service.GroupService;
+import com.codegym.service.StaffService;
 import com.codegym.service.impl.GroupServiceImpl;
 import com.codegym.service.impl.StaffServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,10 +20,10 @@ import java.util.Optional;
 public class StaffController {
 
     @Autowired
-    private StaffServiceImpl staffService;
+    private StaffService staffService;
 
     @Autowired
-    private GroupServiceImpl groupService;
+    private GroupService groupService;
 
     @ModelAttribute("groups")
     public Page<Group> groups(Pageable pageable) {
